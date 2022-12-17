@@ -1,23 +1,36 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  height: 200px;
-  border: 1px solid black;
-  padding: 5px;
+  align-items: center;
 }
 
-.name {
-  font-size: 20px;
-  margin-bottom: 10px;
+.formInput {
+  flex-direction: row;
+  margin-bottom: 20px;
+  justify-content: center;
+  display: flex;
 }
-
 .inputName,
-.inputPhone {
-  width: 150px;
-  margin-bottom: 10px;
+.inputNumber {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-bottom: 18px;
+  font-size: 18px;
 }
 
-.submitName {
+.btn {
+  border-radius: 10%;
+  outline: none;
+  border-width: 0.1px;
+  background: #8fd4e3;
   width: 100px;
+  height: 20px;
+  margin-bottom: 50px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
