@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import css from '../Filter/Filter.module.css';
 import { useSelector } from 'react-redux';
 
-export const Filter = ({ handleDelete, handleChange }) => {
+export const Filter = ({ handleChange }) => {
   const filter = useSelector(state => state.filter);
   const contacts = useSelector(state => state.contacts.items);
   return (
@@ -28,14 +28,6 @@ export const Filter = ({ handleDelete, handleChange }) => {
                 <p>
                   {filtered.name}: {filtered.number}
                 </p>
-                <button
-                  onClick={e => handleDelete(e)}
-                  data-id={filtered.id}
-                  className={css.btn}
-                >
-                  {' '}
-                  Delete{' '}
-                </button>
               </li>
             ))}
         </ul>
