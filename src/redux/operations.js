@@ -24,8 +24,8 @@ export const addContact = createAsyncThunk(
         { name: contact.name, number: contact.number }
       );
       return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
@@ -35,7 +35,7 @@ export const deleteContact = createAsyncThunk(
   async (contactId, thunkAPI) => {
     try {
       const response = await axios.delete(
-        `https://connections-api.herokuapp.com/contacts/${contactId}`
+        `https://connections-api.herokuapp.com/contacts/${contactId.id}`
       );
       return response.data;
     } catch (error) {
@@ -87,8 +87,8 @@ export const register = createAsyncThunk(
         }
       );
       return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
